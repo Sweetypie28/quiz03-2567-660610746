@@ -4,12 +4,12 @@ import { nanoid } from "nanoid";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async () => {
-  readDB();
+/*  readDB();
   return NextResponse.json({
     ok: true,
-    rooms:
-    //totalRooms: 
-  });
+    rooms: : ,
+    totalRooms:  : ,
+  });*/
 };
 
 export const POST = async (request: NextRequest) => {
