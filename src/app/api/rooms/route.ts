@@ -7,31 +7,31 @@ export const GET = async () => {
   readDB();
   return NextResponse.json({
     ok: true,
-    //rooms:
-    //totalRooms:
+    rooms:
+    //totalRooms: 
   });
 };
 
 export const POST = async (request: NextRequest) => {
   const payload = checkToken();
 
-  // return NextResponse.json(
-  //   {
-  //     ok: false,
-  //     message: "Invalid token",
-  //   },
-  //   { status: 401 }
-  // );
+  return NextResponse.json(
+   {
+     ok: false,
+    message: "Invalid token",
+   },
+  { status: 401 }
+  );
 
   readDB();
 
-  // return NextResponse.json(
-  //   {
-  //     ok: false,
-  //     message: `Room ${"replace this with room name"} already exists`,
-  //   },
-  //   { status: 400 }
-  // );
+ return NextResponse.json(
+    {
+       ok: false,
+       message: "Room poil One Piece already exists",
+    },
+     { status: 400 }
+ );
 
   const roomId = nanoid();
 
@@ -40,7 +40,7 @@ export const POST = async (request: NextRequest) => {
 
   return NextResponse.json({
     ok: true,
-    //roomId,
-    message: `Room ${"replace this with room name"} has been created`,
+    roomId,
+    message: "Room Spoil One Piece has been created",
   });
 };

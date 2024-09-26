@@ -83,3 +83,9 @@ export function writeDB() {
     lowDB.write();
   }
 }
+
+export interface Database {
+  roomId: "roomId[]",
+  messageId: "messageId[]",
+  messageText: "messageText[]",
+}
